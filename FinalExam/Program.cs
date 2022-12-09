@@ -1,3 +1,5 @@
+using FinalExam.Business.Services;
+
 namespace FinalExam {
     internal static class Program {
         /// <summary>
@@ -5,10 +7,8 @@ namespace FinalExam {
         /// </summary>
         [STAThread]
         static void Main() {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            MainService.GetInstance().LaunchApp();
         }
     }
 }
